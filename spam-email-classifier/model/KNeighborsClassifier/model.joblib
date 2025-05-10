@@ -1,0 +1,7 @@
+import joblib
+
+# Tải mô hình từ file
+loaded_model = joblib.load('model.joblib')
+
+# In các tham số mô hình
+print(loaded_model)
