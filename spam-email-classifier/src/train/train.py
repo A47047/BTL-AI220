@@ -1,4 +1,5 @@
-from preprocess import load_data, preprocess_data, vectorize_data
+from src.train.preprocess import load_data, preprocess_data, vectorize_data
+# from preprocess import load_data, preprocess_data, vectorize_data
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
@@ -10,11 +11,17 @@ from sklearn.model_selection import train_test_split
 
 def train_model(model_type='naive_bayes'):
     # Đọc và tiền xử lý dữ liệu
-    data = load_data('email.csv')
+    data = load_data('/workspaces/BTL-AI220/spam-email-classifier/data/email.csv')
     X, y, label_encoder = preprocess_data(data)
+    data = data[data['Category'] != '{"mode":"full"']
+
+
+
+
+
 
     # Chia dữ liệu thành tập huấn luyện và kiểm tra
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
     # Vector hóa dữ liệu
     X_train_tfidf, X_test_tfidf, vectorizer = vectorize_data(X_train, X_test)
@@ -24,7 +31,7 @@ def train_model(model_type='naive_bayes'):
         model = LogisticRegression(max_iter=1000)
     elif model_type == 'naive_bayes':
         model = MultinomialNB()
-    elif model_type == 'svm':
+    elif model_type == 'svc':
         model = SVC()
     elif model_type == 'decision_tree':
         model = DecisionTreeClassifier()
