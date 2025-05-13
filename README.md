@@ -9,6 +9,7 @@
 4. Khi chạy phần mềm:
    - Một **màn hình đen** sẽ hiện ra – **bạn không cần quan tâm đến cửa sổ này**.
    - Sau một vài phút (lần đầu chạy có thể mất **khoảng 3–5 phút tùy theo máy**), một **màn hình trắng** sẽ hiện ra – đây là **giao diện chính của phần mềm**.
+   - Sau khi hiển thị **màn hình trắng**, sử dụng bằng cách điền nội dung vào ô trống và ấn nút phân loại để phần mềm phân loại và đưa ra kết quả.
 
 > ⚠️ **Lưu ý:** Trong lần chạy đầu tiên, phần mềm có thể mất một chút thời gian để khởi động do cần tải hoặc khởi tạo một số tài nguyên. Vui lòng kiên nhẫn đợi đến khi giao diện xuất hiện.
 
