@@ -1,5 +1,7 @@
 ## Hướng dẫn sử dụng phần mềm
 
+**Lưu ý:** Mô hình của phần mềm là SVC (mô hình được đánh giá tốt nhất sau khi train)
+
 1. **Tải file ZIP** của phần mềm về máy.
 
 2. **Giải nén** file ZIP ra thư mục bất kỳ.
